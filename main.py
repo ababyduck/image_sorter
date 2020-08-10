@@ -78,7 +78,6 @@ def sort_wallpapers(img_path):
     """
     os.chdir(img_path)
     files = os.listdir(img_path)
-    print(files)
     sorted_count = 0
 
     for file in files:
