@@ -1,5 +1,5 @@
 # image_sorter
-A quick and simple Python script for sorting images (such as wallpaper) by their aspect ratio.  Takes a folder of images and sorts them by aspect ratio.  Multi-monitor aspect ratios are detected, and it is possible to configure:
+A quick and simple Python script for sorting images (such as wallpaper) by their aspect ratio.  Multi-monitor aspect ratios are detected, and it is possible to configure:
 - Which aspect ratios are accepted (everything else is thrown into a "Weird" folder)
 - Minimum dimensions
 
