@@ -1,6 +1,6 @@
 import os
-import shutil
-import sys
+from shutil import move
+from sys import exit
 from PIL import Image
 
 COMMON_RATIOS = ["16:9", "16:10", "8:5", "5:4", "4:3"]
@@ -103,7 +103,7 @@ def sort_wallpapers(img_path):
 
             aspect_folder = sanitize_dir_name(aspect_folder)
             mk_dir(aspect_folder)
-            shutil.move(file, os.path.join(aspect_folder, file))
+            move(file, os.path.join(aspect_folder, file))
             print(f"\tMoved \"{file}\" into folder \"{aspect_folder}\"")
             sorted_count += 1
 
@@ -114,7 +114,7 @@ if __name__ == "__main__":
     path = input("Enter a valid path with images to sort them by aspect ratio\n> ")
     while not os.path.isdir(path):
         if path.lower() == "q":
-            sys.exit()
+            exit(0)
         else:
             path = input("Invalid path. Try again or q to quit\n> ")
     sort_wallpapers(path)
