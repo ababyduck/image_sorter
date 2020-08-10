@@ -42,7 +42,8 @@ def sanitize_dir_name(dirname):
         "\"": "'",
     }
     for forbidden_char, new_char in replace_dict.items():
-        dirname = dirname.replace(forbidden_char, new_char)
+        if forbidden_char in dirname:
+            dirname = dirname.replace(forbidden_char, new_char)
     return dirname
 
 
